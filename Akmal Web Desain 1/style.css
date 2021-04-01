@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'xioawei';
+    src: url(font/ZCOOLXiaoWei-Regular.ttf);
+}
+
+body {
+    font-family: 'xioawei';
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header {
+    text-align: center;
+    display: grid;
+    background-image: url(img/jess-bailey-UHqfUTDmdC4-unsplash.jpg);
+    background-size: cover;
+    height: auto;
+    padding: 20px;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    justify-content: center;
+    padding-bottom: 64px;
+}
+
+
+header h1 {
+    color: #ecd0ba;
+}
+
+header h1 span {
+    color:#ff971d;
+}
+
+header img {
+    border: 5px solid grey;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    transition: .7s;
+}
+
+header img:hover {
+    position: relative;
+    bottom: 4px;
+    filter: contrast(.8) saturate(.9);
+    box-shadow: 3px 3px rgb(70, 67, 62);
+    border: 5px solid salmon;
+}
+
+header a button {
+    border: 3px solid rgb(107, 75, 75);
+    margin-top: 20px;
+    border-radius: 14%;
+    height: 50px;
+    background-color: #ff961db9;
+    transition: .7s;
+    width: 90%;
+}
+
+header a button:hover {
+    position: relative;
+    bottom: 3.5px;
+    box-shadow: 3px 3px gray;
+    background-color: wheat;
+    cursor: pointer;
+}
+
+header a button span {
+    font-size: larger;
+    font-weight: bold;
+    color: black;
+}
+
+header a button span:hover {
+    color: tomato;  
+}
+/* header */
+
+
+/* modal section */
+section {
+    /* display: none; */
+    background-color: gainsboro;
+    padding: 15px;
+    display: grid;
+    grid-template-areas: "about btn portfolio";
+    transition: all .3s;
+}
+
+section#modal div.about {
+    width: 450px;
+    grid-area: about;
+    background-color: honeydew;
+    padding: 18px;
+    border: 4px solid black;
+    box-shadow: 1.5px 1.4px 1.7px 1.6px rgb(0, 0, 0);
+}
+
+section#modal div.about h1 {
+    font-size: 28px;
+}
+
+section#modal div.about li, section#modal div.about p {
+    font-size: 18px;
+}
+
+section#modal div.close {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: maroon;
+    align-items: center;
+    grid-area: btn;
+    margin: auto;
+    box-shadow: 1px 1px 1.7px 1.6px rgb(0, 0, 0);
+    transition: .7s;
+}
+
+section#modal div.close:hover {
+    box-shadow: 1px 1px 1.7px 6px rgb(233, 225, 225);
+    cursor: pointer;
+    background-color: rgba(128, 0, 0, 0.637);
+}
+
+section#modal div.close span:hover {
+    color: black;
+    cursor: pointer;
+}
+
+section#modal div.close span {
+    font-weight: 1000;
+    font-size: 21px;
+    color: white;
+    align-items: center;
+    line-height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section#modal div.portfolio {
+    text-align: center;
+    width: auto;
+    grid-area: portfolio;
+    background-color: wheat;
+    padding: 18px;
+    border: 4px solid rgb(141, 135, 135);
+    box-shadow: 1.2px 1.5px 1.8px 1.7px rgb(0, 0, 0);
+}
+
+section#modal div.portfolio h1 {
+    text-align: center;
+    font-size: 28px;
+}
+
+section#modal div.portfolio img {
+    width: 310px;
+    height: 180px;
+    display: inline-block;
+    margin-right: 20px;
+    transition: .4s;
+}
+
+section#modal div.portfolio img:hover {
+    box-shadow: 1.5px 3px 6px black;
+}
+/* modal section */
+
+/* learning progress */
+aside {
+    background-image: url(img/joan-tran-NmsW5AY91n0-unsplash.jpg);
+    display: grid;
+    background-size: cover;
+    height: auto;
+    padding: 15px;
+    grid-template-areas:".title."   
+                        "front . back";
+    padding-bottom: 100px;
+}
+
+.learn h1 {
+    font-size: 25px;
+}
+
+aside h1.main-learn {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 35px;
+    grid-area: title;    
+}
+
+div.front {
+    margin-left: 60px;
+    grid-area: front;
+}
+
+div.back {
+    margin-right: 60px;
+    grid-area: back;
+}
+
+progress {
+    border-radius: 50%;
+    height: 20px;
+    width: 400px;
+    margin-bottom: 5px;
+}
+
+progress#html::-webkit-progress-value {
+    background: orangered;
+}
+
+progress#css::-webkit-progress-value {
+    background: skyblue;
+}
+
+progress#js::-webkit-progress-value {
+    background: yellow;
+}
+
+progress#php::-webkit-progress-value {
+    background: #787CB5;
+}
+
+progress#sql::-webkit-progress-value {
+    background: orange;
+}
+
+progress#py::-webkit-progress-value {
+    background: rgb(8, 8, 223);
+}
+
+/* more spesific skill */
+div.front h1 {
+    font-weight: bold;
+}
+
+div.front h1.html {
+    color: orangered;
+}
+
+div.front h1.css {
+    color: rgb(59, 187, 238);
+}
+
+div.front h1.javascript {
+    color: black;
+}
+
+div.back h1.php {
+    color: #787CB5;
+}
+
+div.back h1.mysql span {
+    color: rgb(243, 164, 17);
+}
+
+div.back h1.python span {
+    color: blue;
+}
+
+div.back h1.python {
+    color: yellow;
+}
+
+/* random project */
+
+div.random-project {
+    background-color: grey;
+    text-align: center;
+    padding: 20px;
+}
+
+div.random-project h1 {
+    font-size: 1.8rem;
+}
+
+div.flex-project {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+div.flex-project img {
+    width: 400px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px whitesmoke;
+    transition: .4s;
+}
+
+div.flex-project img:hover {
+    box-shadow: 1px 1px 1px #000;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+
+/* random project */
+
+
+/* more spesific skill */
+
+/* learning progress */
+
+/* footer */
+footer img {
+    width: 37px;
+    height: 37px;
+}
+
+footer a {
+    margin-right: 7px;
+}
+
+footer {
+    color: wheat;
+    display: grid;
+    grid-template-areas: "contact copyright";
+    background-color: #504c4c;
+}
+
+footer .contact {
+    grid-area: contact;
+    margin-top: 10px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+footer .copyright {
+    grid-area: copyright;
+    text-align: center;
+}
+/* footer */
+
+
+
