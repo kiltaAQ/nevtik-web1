@@ -1,10 +1,5 @@
-@font-face {
-    font-family: 'xioawei';
-    src: url(font/ZCOOLXiaoWei-Regular.ttf);
-}
-
 body {
-    font-family: 'xioawei';
+    font-family: 'ZCOOL XiaoWei', serif;
     margin: 0;
     padding: 0;
 }
