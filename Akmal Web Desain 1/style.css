@@ -13,7 +13,7 @@ body {
 header {
     text-align: center;
     display: grid;
-    background-image: url(img/jess-bailey-UHqfUTDmdC4-unsplash.jpg);
+    background-image: url(img/jess-bailey-UHqfUTDmdC4-unsplash1.jpg);
     background-size: cover;
     height: auto;
     padding: 20px;
@@ -25,15 +25,15 @@ header {
 
 
 header h1 {
-    color: #ecd0ba;
+    color: #fd9115;
 }
 
 header h1 span {
-    color:#ff971d;
+    color:#e97c00;
 }
 
 header img {
-    border: 5px solid grey;
+    border: 5px solid rgb(114, 113, 113);
     width: 270px;
     height: 270px;
     border-radius: 50%;
@@ -44,8 +44,8 @@ header img:hover {
     position: relative;
     bottom: 4px;
     filter: contrast(.8) saturate(.9);
-    box-shadow: 3px 3px rgb(70, 67, 62);
-    border: 5px solid salmon;
+    box-shadow: 3px 3px rgb(78, 75, 70);
+    border: 5px solid rgb(252, 102, 86);
 }
 
 header a button {
@@ -55,7 +55,7 @@ header a button {
     height: 50px;
     background-color: #ff961db9;
     transition: .7s;
-    width: 90%;
+    width: 90%; 
 }
 
 header a button:hover {
@@ -67,13 +67,9 @@ header a button:hover {
 }
 
 header a button span {
-    font-size: larger;
+    font-size: large;
     font-weight: bold;
-    color: black;
-}
-
-header a button span:hover {
-    color: tomato;  
+    color: rgb(92, 65, 65);
 }
 /* header */
 
@@ -82,191 +78,89 @@ header a button span:hover {
 section {
     /* display: none; */
     background-color: gainsboro;
-    padding: 15px;
+    padding: 50px 50px;
     display: grid;
-    grid-template-areas: "about btn portfolio";
+    grid-template-areas: "about ilustrasi";
     transition: all .3s;
 }
 
 section#modal div.about {
     width: 450px;
     grid-area: about;
-    background-color: honeydew;
     padding: 18px;
-    border: 4px solid black;
-    box-shadow: 1.5px 1.4px 1.7px 1.6px rgb(0, 0, 0);
+    margin-left: 100px;
 }
 
 section#modal div.about h1 {
     font-size: 28px;
+    text-shadow: 2px 2px #7bff00;
+    width: 100%;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: typing 3s steps(100,end);
+    animation: animasi-ketik 3s steps(100, end);
+    animation-iteration-count: infinite;
 }
+@keyframes animasi-ketik{
+    from { width: 0; }
+  }
+  
+  @-webkit-keyframes animasi-ketik{
+    from { width: 0; }
+  }
 
 section#modal div.about li, section#modal div.about p {
     font-size: 18px;
 }
 
-section#modal div.close {
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    box-sizing: border-box;
-    text-align: center;
-    background-color: maroon;
-    align-items: center;
-    grid-area: btn;
-    margin: auto;
-    box-shadow: 1px 1px 1.7px 1.6px rgb(0, 0, 0);
-    transition: .7s;
-}
-
-section#modal div.close:hover {
-    box-shadow: 1px 1px 1.7px 6px rgb(233, 225, 225);
-    cursor: pointer;
-    background-color: rgba(128, 0, 0, 0.637);
-}
-
-section#modal div.close span:hover {
-    color: black;
-    cursor: pointer;
-}
-
-section#modal div.close span {
-    font-weight: 1000;
-    font-size: 21px;
-    color: white;
-    align-items: center;
-    line-height: 60px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-section#modal div.portfolio {
-    text-align: center;
+section#modal div.ilustrasi {
     width: auto;
-    grid-area: portfolio;
-    background-color: wheat;
-    padding: 18px;
-    border: 4px solid rgb(141, 135, 135);
-    box-shadow: 1.2px 1.5px 1.8px 1.7px rgb(0, 0, 0);
+    grid-area: ilustrasi;
 }
 
-section#modal div.portfolio h1 {
-    text-align: center;
-    font-size: 28px;
-}
-
-section#modal div.portfolio img {
-    width: 310px;
-    height: 180px;
+section#modal div.ilustrasi img {
+    width: 350px;
+    height: 270px;
     display: inline-block;
-    margin-right: 20px;
-    transition: .4s;
+    margin-right: 10px;
+    position:relative;
+    animation: mymove 2s;
+    animation-iteration-count: infinite;
 }
-
-section#modal div.portfolio img:hover {
-    box-shadow: 1.5px 3px 6px black;
-}
+@keyframes mymove {
+    0%   {left: 0px; top: 0px;}
+    50%  {left: 0px; top: 30px;}
+    100% {left: 0px; top: 0px;}
+  }
 /* modal section */
 
 /* learning progress */
 aside {
     background-image: url(img/joan-tran-NmsW5AY91n0-unsplash.jpg);
-    display: grid;
     background-size: cover;
     height: auto;
     padding: 15px;
-    grid-template-areas:".title."   
-                        "front . back";
     padding-bottom: 100px;
-}
-
-.learn h1 {
-    font-size: 25px;
 }
 
 aside h1.main-learn {
     justify-content: center;
     text-align: center;
     color: black;
-    font-size: 35px;
-    grid-area: title;    
+    font-size: 35px;   
 }
-
-div.front {
-    margin-left: 60px;
-    grid-area: front;
+.learn{
+    padding-top: 20px;
 }
-
-div.back {
-    margin-right: 60px;
-    grid-area: back;
+.learn h1 {
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 3px;
 }
-
-progress {
-    border-radius: 50%;
-    height: 20px;
-    width: 400px;
-    margin-bottom: 5px;
-}
-
-progress#html::-webkit-progress-value {
-    background: orangered;
-}
-
-progress#css::-webkit-progress-value {
-    background: skyblue;
-}
-
-progress#js::-webkit-progress-value {
-    background: yellow;
-}
-
-progress#php::-webkit-progress-value {
-    background: #787CB5;
-}
-
-progress#sql::-webkit-progress-value {
-    background: orange;
-}
-
-progress#py::-webkit-progress-value {
-    background: rgb(8, 8, 223);
-}
-
-/* more spesific skill */
-div.front h1 {
-    font-weight: bold;
-}
-
-div.front h1.html {
-    color: orangered;
-}
-
-div.front h1.css {
-    color: rgb(59, 187, 238);
-}
-
-div.front h1.javascript {
-    color: black;
-}
-
-div.back h1.php {
-    color: #787CB5;
-}
-
-div.back h1.mysql span {
-    color: rgb(243, 164, 17);
-}
-
-div.back h1.python span {
-    color: blue;
-}
-
-div.back h1.python {
-    color: yellow;
-}
+/* learning progress */
 
 /* random project */
-
 div.random-project {
     background-color: grey;
     text-align: center;
@@ -298,13 +192,7 @@ div.flex-project img:hover {
     top: 1px;
     cursor: pointer;
 }
-
 /* random project */
-
-
-/* more spesific skill */
-
-/* learning progress */
 
 /* footer */
 footer img {
@@ -335,6 +223,7 @@ footer .copyright {
     text-align: center;
 }
 /* footer */
+
 
 
 
